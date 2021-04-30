@@ -13,8 +13,9 @@ body {
 }
 
 h1 {
-  margin: 5rem 0;
+  margin: 2rem 0 2rem 0;
   font-size: 4rem;
+  font-weight: 200;
 }
 
 .grid {
@@ -29,8 +30,8 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #333;
-  border-radius: 5px;
+  border: 2px solid #888;
+  border-radius: 3px;
 }
 
 .box:hover {
@@ -38,5 +39,38 @@ h1 {
   cursor: pointer;
 }
 
-.fa-circle { color: rgb(0, 98, 255); }
-.fa-times { color: rgb(206, 16, 16); }
+.fa-circle, .blue { color: rgb(0, 98, 255); }
+.fa-times, .red { color: rgb(206, 16, 16); }
+.gray { color: rgba(0, 0, 0, 0.5)}
+
+.result {
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+}
+
+.btn {
+  margin-top: 2.5rem;
+  padding: 0.7rem 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: 3px solid rgb(0, 98, 255);
+}
+
+.btn:hover {
+  border-bottom: 3px solid rgb(206, 16, 16);
+}
+
+@media (max-width: 400px) {
+  h1 {
+    margin: 2rem 0;
+    font-size: 3rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    grid-gap: .2rem;
+  }
+}
